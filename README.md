@@ -38,35 +38,35 @@ The Smart Clinic Management System is a modern healthcare application designed t
 Although developed as a capstone project, the application is structured using real‑world engineering patterns to demonstrate professional backend development skills suitable for enterprise environments.
 
 # Features
-Admin
+**Admin**
 - Add, update, and manage doctors
 
 - View clinic‑wide metrics
 
 - Manage user accounts
 
-Doctor
+**Doctor**
 - View upcoming appointments
 
 - Access patient records
 
 - Create and update prescriptions
 
-Patient
+**Patient**
 - Search for doctors
 
 - Book appointments
 
 - View personal medical history
 
-Security
+**Security**
 - JWT‑based authentication
 
 - Role‑based authorization
 
 - Secure password hashing
 
-Reporting
+**Reporting**
 - Daily appointment reports
 
 - Doctor performance metrics
@@ -76,14 +76,14 @@ Reporting
 # Architecture
 The system follows a three‑tier architecture:
 
-1. Presentation Layer
+**1. Presentation Layer**
 - Thymeleaf MVC for Admin and Doctor dashboards
 
 - REST APIs for Patient and Appointment modules
 
 - JSON responses for external clients
 
-2. Application Layer
+**2. Application Layer**
 - Spring Boot controllers
 
 - Service layer containing business logic
@@ -92,12 +92,12 @@ The system follows a three‑tier architecture:
 
 - DTOs for clean API responses
 
-3. Data Layer
+**3. Data Layer**
 - MySQL for structured relational data
 
 - MongoDB for flexible prescription documents
 
-High‑Level Flow
+**High‑Level Flow**
 1. User interacts with dashboard or REST endpoint
 
 2. Controller receives the request
@@ -113,7 +113,7 @@ High‑Level Flow
 7. User receives updated UI or API response
 
 # Tech Stack
-Backend
+**Backend**
 - Java 17
 
 - Spring Boot
@@ -130,12 +130,12 @@ Backend
 
 - Maven
 
-Databases
+**Databases**
 - MySQL
 
 - MongoDB
 
-DevOps
+**DevOps**
 - Docker
 
 - GitHub Actions (CI pipeline)
@@ -148,7 +148,7 @@ Patient	Search doctors, book appointments
 Auth	JWT login, registration, role management
 Reports	Stored procedures for analytics
 # Database Design
-MySQL (Relational)
+**MySQL (Relational)**
 - Patient
 
 - Doctor
@@ -159,13 +159,13 @@ MySQL (Relational)
 
 - Role
 
-MongoDB (Document‑based)
+**MongoDB (Document‑based)**
 - Prescription documents
 
 - Flexible schema for medication lists, notes, and dosage history
 
 # Security
-The system uses:
+**The system uses:**
 
 - JWT authentication
 
@@ -175,7 +175,7 @@ The system uses:
 
 - Secure API endpoints
 
-Roles include:
+**Roles include:**
 
 - ADMIN
 
@@ -184,16 +184,16 @@ Roles include:
 - PATIENT
 
 # API Endpoints (Sample)
-Doctor APIs
+**Doctor APIs**
 Code
 GET /api/doctors
 GET /api/doctors/{id}
 POST /api/doctors
-Appointment APIs
+**Appointment APIs**
 Code
 GET /api/appointments/patient/{id}
 POST /api/appointments
-Auth APIs
+**Auth APIs**
 Code
 POST /api/auth/login
 POST /api/auth/register
