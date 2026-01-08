@@ -4,33 +4,33 @@ A full‑stack, cloud‑ready healthcare management platform built with Spring B
 Designed to demonstrate enterprise‑grade engineering practices, modular architecture, and secure multi‑role access for Admin, Doctor, and Patient users.
 
 # Table of Contents
-Overview
+- Overview
 
-Features
+- Features
 
-Architecture
+- Architecture
 
-Tech Stack
+- Tech Stack
 
-System Modules
+- System Modules
 
-Database Design
+- Database Design
 
-Security
+- Security
 
-API Endpoints
+- API Endpoints
 
-Screenshots
+- Screenshots
 
-Running the Project
+- Running the Project
 
-Docker Support
+- Docker Support
 
-CI/CD Pipeline
+- CI/CD Pipeline
 
-Future Enhancements
+- Future Enhancements
 
-Author
+- Author
 
 # Overview
 The Smart Clinic Management System is a modern healthcare application designed to streamline clinic operations. It supports patient onboarding, doctor management, appointment scheduling, and prescription storage. The system includes role‑based dashboards and secure authentication using JWT.
@@ -39,106 +39,106 @@ Although developed as a capstone project, the application is structured using re
 
 # Features
 Admin
-Add, update, and manage doctors
+- Add, update, and manage doctors
 
-View clinic‑wide metrics
+- View clinic‑wide metrics
 
-Manage user accounts
+- Manage user accounts
 
 Doctor
-View upcoming appointments
+- View upcoming appointments
 
-Access patient records
+- Access patient records
 
-Create and update prescriptions
+- Create and update prescriptions
 
 Patient
-Search for doctors
+- Search for doctors
 
-Book appointments
+- Book appointments
 
-View personal medical history
+- View personal medical history
 
 Security
-JWT‑based authentication
+- JWT‑based authentication
 
-Role‑based authorization
+- Role‑based authorization
 
-Secure password hashing
+- Secure password hashing
 
 Reporting
-Daily appointment reports
+- Daily appointment reports
 
-Doctor performance metrics
+- Doctor performance metrics
 
-Stored procedures for analytics
+- Stored procedures for analytics
 
 # Architecture
 The system follows a three‑tier architecture:
 
 1. Presentation Layer
-Thymeleaf MVC for Admin and Doctor dashboards
+- Thymeleaf MVC for Admin and Doctor dashboards
 
-REST APIs for Patient and Appointment modules
+- REST APIs for Patient and Appointment modules
 
-JSON responses for external clients
+- JSON responses for external clients
 
 2. Application Layer
-Spring Boot controllers
+- Spring Boot controllers
 
-Service layer containing business logic
+- Service layer containing business logic
 
-Repository layer for data access
+- Repository layer for data access
 
-DTOs for clean API responses
+- DTOs for clean API responses
 
 3. Data Layer
-MySQL for structured relational data
+- MySQL for structured relational data
 
-MongoDB for flexible prescription documents
+- MongoDB for flexible prescription documents
 
 High‑Level Flow
-User interacts with dashboard or REST endpoint
+1. User interacts with dashboard or REST endpoint
 
-Controller receives the request
+2. Controller receives the request
 
-Service layer processes business logic
+3. Service layer processes business logic
 
-Repository accesses MySQL or MongoDB
+4. Repository accesses MySQL or MongoDB
 
-Data is returned to the service layer
+5. Data is returned to the service layer
 
-Controller returns HTML or JSON
+6. Controller returns HTML or JSON
 
-User receives updated UI or API response
+7. User receives updated UI or API response
 
 # Tech Stack
 Backend
-Java 17
+- Java 17
 
-Spring Boot
+- Spring Boot
 
-Spring MVC
+- Spring MVC
 
-Spring Web
+- Spring Web
 
-Spring Security (JWT)
+- Spring Security (JWT)
 
-Spring Data JPA
+- Spring Data JPA
 
-Spring Data MongoDB
+- Spring Data MongoDB
 
-Maven
+- Maven
 
 Databases
-MySQL
+- MySQL
 
-MongoDB
+- MongoDB
 
 DevOps
-Docker
+- Docker
 
-GitHub Actions (CI pipeline)
+- GitHub Actions (CI pipeline)
 
 # System Modules
 Module	Description
@@ -149,39 +149,39 @@ Auth	JWT login, registration, role management
 Reports	Stored procedures for analytics
 # Database Design
 MySQL (Relational)
-Patient
+- Patient
 
-Doctor
+- Doctor
 
-Appointment
+- Appointment
 
-User
+- User
 
-Role
+- Role
 
 MongoDB (Document‑based)
-Prescription documents
+- Prescription documents
 
-Flexible schema for medication lists, notes, and dosage history
+- Flexible schema for medication lists, notes, and dosage history
 
 # Security
 The system uses:
 
-JWT authentication
+- JWT authentication
 
-Role‑based access control
+- Role‑based access control
 
-BCrypt password hashing
+- BCrypt password hashing
 
-Secure API endpoints
+- Secure API endpoints
 
 Roles include:
 
-ADMIN
+- ADMIN
 
-DOCTOR
+- DOCTOR
 
-PATIENT
+- PATIENT
 
 # API Endpoints (Sample)
 Doctor APIs
