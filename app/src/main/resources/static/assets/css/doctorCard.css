@@ -1,0 +1,67 @@
+/* Doctor Card Styles */
+.doctor-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+    width: 280px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.doctor-info h3 {
+    margin-bottom: 0.5rem;
+    color: #004080;
+    font-size: 1.25rem;
+}
+
+.doctor-info p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* Actions section */
+.card-actions {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.card-actions button {
+    background-color: #004080;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-actions button:hover {
+    background-color: #0066cc;
+    transform: scale(1.05);
+}
+
+/* Admin-specific button */
+.adminBtn {
+    background-color: #b22222;
+}
+
+.adminBtn:hover {
+    background-color: #d32f2f;
+}
+
+/* Patient Book Now button */
+.bookBtn {
+    background-color: #004080;
+}
+
+.bookBtn:hover {
+    background-color: #017d7e;
+}
