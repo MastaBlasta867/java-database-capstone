@@ -1,8 +1,8 @@
 package com.project.back_end.services;
 
-import com.project.back_end.repositories.AdminRepository;
-import com.project.back_end.repositories.DoctorRepository;
-import com.project.back_end.repositories.PatientRepository;
+import com.project.back_end.repo.AdminRepository;
+import com.project.back_end.repo.DoctorRepository;
+import com.project.back_end.repo.PatientRepository;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -37,28 +37,29 @@ public class TokenService {
     }
 
     // Generate JWT token for a given email
-    public String generateToken(String email) {
-        Date now = new Date();
-        Date expiry = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days
+    // Generate JWT token for a given email
+public String generateToken(String email) {
+    Date now = new Date();
+    Date expiry = new Date(now.getTime() + (7 * 24 * 60 * 60 * 1000)); // 7 days
 
-        return Jwts.builder()
-                .setSubject(email)
-                .setIssuedAt(now)
-                .setExpiration(expiry)
-                .signWith(getSigningKey(), SignatureAlgorithm.HS256)
-                .compact();
-    }
+    return Jwts.builder()
+            .setSubject(email)
+            .setIssuedAt(now)
+            .setExpiration(expiry)
+            .signWith(getSigningKey(), SignatureAlgorithm.HS256)
+            .compact();
+}
 
     // Extract email (subject) from token
     public String extractEmail(String token) {
-        Claims claims = Jwts.parserBuilder()
-                .setSigningKey(getSigningKey())
+        Claims claims = Jwts.parser()
+                .verifyWith(getSigningKey())
                 .build()
-                .parseClaimsJws(token)
-                .getBody();
+                .parseSignedClaims(token)
+                .getPayload();
         return claims.getSubject();
     }
-
+    
     // Validate token for a specific role
     public boolean validateToken(String token, String role) {
         try {
